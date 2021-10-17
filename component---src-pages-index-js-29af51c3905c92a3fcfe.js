@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[678],{704:function(e,l,t){t.r(l),t.d(l,{default:function(){return r}});var n=t(294);function r(){return n.createElement("section",null,n.createElement("div",null,n.createElement("h2",null,"Design"),n.createElement("h3",null,"Develop"),n.createElement("p",null,"UX Desinger & Web developer based in Manchester")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-29af51c3905c92a3fcfe.js.map

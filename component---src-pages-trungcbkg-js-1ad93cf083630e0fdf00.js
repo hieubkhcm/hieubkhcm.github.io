@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[572],{751:function(t,r,e){e.r(r),e.d(r,{default:function(){return l}});var n=e(294);function l(){return n.createElement("div",null,"Tui là Trung trong trắng")}}}]);
-//# sourceMappingURL=component---src-pages-trungcbkg-js-1ad93cf083630e0fdf00.js.map

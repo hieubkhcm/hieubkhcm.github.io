@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Project #2 - personal note-taking as a Website</title>
+        <title>IoT Stack Installation On Ubuntu - personal note-taking as a Website</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Article <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -45,7 +45,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../art_IoTStackInstallationOnGCP/" class="dropdown-item">IoT Stack Installation On Ubuntu</a>
+    <a href="./" class="dropdown-item active">IoT Stack Installation On Ubuntu</a>
 </li>
     </ul>
   </li>
@@ -61,7 +61,7 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Project <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -76,7 +76,7 @@
   </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Project #2</a>
+    <a href="../proj_002/" class="dropdown-item">Project #2</a>
 </li>
                                 </ul>
                             </li>
@@ -92,12 +92,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../proj_001_IoTStack/" class="nav-link">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../about/" class="nav-link">
+                                <a rel="next" href="../art_002/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -118,14 +118,32 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-install-iotstack-on-ubuntu-monitoring-all-built-containers-with-portainerio" class="nav-link">How to install IOTStack on Ubuntu (monitoring all built containers with Portainer.io)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="how-to-install-iotstack-on-ubuntu-monitoring-all-built-containers-with-portainerio">How to install IOTStack on Ubuntu (monitoring all built containers with Portainer.io)</h1>
 <blockquote>
-<p><em>Huh, so this is how it works</em></p>
-</blockquote></div>
+<p><em>"Hackers rarely have full knowledge of the technology stack of a target." - John McAfee</em></p>
+</blockquote>
+<p>Written by <strong>Henry Le</strong> on Oct 29, 2021</p>
+<p>As I recently start projects on the term and found that open-source community already built a very completed stack that can do almost everything one can imagine to do with IoT. So this article I would like to share how can IoTStack be installed on Ubuntu. I tested the process on both Google Cloud Platform and my local server, so I believe that this instruction works just fine with anyone else have interests in start to have fun with IOTStack.</p>
+<p>If you already have a RPI4 with you, the <a href="https://sensorsiot.github.io/IOTstack/Getting-Started/">instruction</a> of Andreas Spiess is a must-read.</p>
+<p>Firstly, making sure you already have everything packages updated and upgrades with:</p>
+<pre><code>sudo apt update
+sudo apt upgrade -y
+</code></pre>
+<p>And also <em>curl</em> if you are not sure that the package is already installed  </p>
+<pre><code>sudo apt install curl
+</code></pre>
+<p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" />
+https://photos.app.goo.gl/2tidr1FFv37Gk7Gc9</p></div>
             </div>
         </div>
 

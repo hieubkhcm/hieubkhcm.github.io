@@ -1,20 +1,29 @@
 site_name: Henry Le 
-nav:
-    - Home: index.md
-    - Article:
-      - IoTStack: 
-        - 'IoT Stack Installation On GCP': art_001_IoTStackInstallationOnGCP.md
-      - 5GC:
-        - 'Article #2': art_002.md
 
+nav:
+    #====================
+    - Home: index.md
+
+    #====================
+    - Article:
+      - 5G:
+        - '': art_002.md
+      - IoTStack: 
+        - 'IoT Stack Installation On GCP': art_IoTStackInstallationOnGCP.md
+      
+    #====================
     - Project:
         - SubProj:
           - 'Project #1': proj_001_IoTStack.md
         - 'Project #2': proj_002.md
+
+    #====================
     - About: about.md
+
 theme: 
     name: mkdocs
     nav_style: dark
+    
 markdown_extensions:
   - attr_list
   - md_in_html

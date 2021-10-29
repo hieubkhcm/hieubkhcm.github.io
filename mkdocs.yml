@@ -1,4 +1,4 @@
-site_name: Henry Le 
+site_name: 'Note-taking as a Website' 
 
 nav:
     #====================
@@ -6,10 +6,10 @@ nav:
 
     #====================
     - Article:
+      - IoTStack: 
+        - 'IoT Stack Installation On Ubuntu': art_IoTStackInstallationOnGCP.md
       - 5G:
         - '': art_002.md
-      - IoTStack: 
-        - 'IoT Stack Installation On GCP': art_IoTStackInstallationOnGCP.md
       
     #====================
     - Project:

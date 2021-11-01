@@ -142,8 +142,14 @@ sudo apt upgrade -y
 <p>And also <em>curl</em> if you are not sure that the package is already installed  </p>
 <pre><code>sudo apt install curl
 </code></pre>
-<p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" />
-https://photos.app.goo.gl/2tidr1FFv37Gk7Gc9</p></div>
+<p>After having curl on your system, run the following command.</p>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/SensorsIot/IOTstack/master/install.sh | bash
+</code></pre>
+<p>As default, a directory call /IOTStack will be created as your /home directory<br />
+<img alt="Placeholder" src="/img/IoTStack/cd IOTStack.png" width="600" />  </p>
+<p>As you may see, there are two script file, install.sh and menu.sh. install.sh indeed the script file we curl from the link above. By invokinng install.sh, another directory of IOTStack will then created and the content will be cloned just as the same as the parent folder we see here.</p>
+<p>If you install IOTStack on a completely clean OS, without even docker installed, IOTStack will help to install the needed docker version for you.</p>
+<p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" /></p></div>
             </div>
         </div>
 

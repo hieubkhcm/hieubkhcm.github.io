@@ -152,7 +152,7 @@ sudo apt upgrade -y
 </code></pre>
 <p>As default, a directory call /IOTStack will be created as your /home directory<br />
 <img alt="Placeholder" src="/img/IoTStack/cd IOTStack.png" width="600" /></p>
-<p>As you may see, there are two script file, install.sh and menu.sh. install.sh indeed the script file we curl from the link above. By invokinng install.sh, another directory of IOTStack will then created and the content will be cloned just as the same as the parent folder we see here.</p>
+<p>As you may see, there are two script file, <em>install.sh</em> and <em>menu.sh</em>, <em>install.sh</em> is indeed the script file we curl from the link above. By invokinng <em>install.sh</em>, another directory tree of IOTStack will then created and the content will be cloned just as the same as the parent folder we see here.</p>
 <p>Now, its time to see what we have in menu</p>
 <pre><code>cd ~
 cd /IOTStack
@@ -164,13 +164,13 @@ cd /IOTStack
 <p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" /></p>
 <p>If everything is running properly, a menu will be shown<br />
 <img alt="Placeholder" src="/img/IoTStack/menushown.png" width="600" /></p>
-<p>Navigating aroung by arrow keys and choosing the docker images aby typing space bar. In my case, I choose <strong>grafana, influxdb, mosquitto, nodered, portainer-ce, portainer-agent, postgres, tasmoadmin and wiraguard</strong>. </p>
+<p>Navigating aroung by arrow keys and choosing the docker images by typing space bar. In my case, I choose <strong>grafana, influxdb, mosquitto, nodered, portainer-ce, portainer-agent, postgres, tasmoadmin and wireguard</strong>. </p>
 <p>At this point, you finished choosing your <em>stack</em>, assuming this is the first time you install IOTStack, there are no images or containers running in you system yet. The next step is making eveything up and running.  </p>
 <p>Choosing the second option in the menu.<br />
 <img alt="Placeholder" src="/img/IoTStack/menushown.png" width="600" /></p>
 <p>There are several useful options in the <em>Docker Commands</em> menu, in this article I simply choosing <em>Start Stack</em>.
 The very first time building IOTStack might take a while because there are no existing images stored in your system yet. So for the first time, images of chosen option from the previous step will be automatically pulling to your system and then make it running.</p>
-<p>So far so good, the Stack after built up will look just as below, if there are any error occur, error message will let you know while building up the stack.</p>
+<p>So far so good, the Stack after built up will look just as below, if there are any errors occur, error message will let you know while building up the stack.</p>
 <p><img alt="Placeholder" src="/img/IoTStack/builtup.png" width="700" /></p>
 <p>To check whether the docker images was pulled to your system, enter the following command  </p>
 <pre><code>docker images
@@ -184,7 +184,7 @@ The very first time building IOTStack might take a while because there are no ex
 On your Web Browser (ie. Chrome, Firefox, etc). Enter <a href="https://localhost:9000/"><em>localhost:9000/</em></a>, this will open up the Web GUI of portainer-ce.
 <img alt="Placeholder" src="/img/IoTStack/webportainer.png" width="600" /></p>
 <p>You will need to secure your admin account's password the first time you logging to the Portainer.<br />
-After logging in, the existing images and running containers are all shown up for your monitoring. Portainer provides a various command buttons so that you can easily manipulate the Stack on some levels.<br />
+After logging in, the existing images and running containers are all shown up for your monitoring. Portainer provides various command buttons so that you can easily manipulate the Stack to certain levels.<br />
 <img alt="Placeholder" src="/img/IoTStack/portainercompleted.png" width="600" /></p>
 <p>Basically, there are all the steps you need to operate when dealing with IOTStack for the first time, the result may different from time to time since the project IOTStack is actively updated by its contributors. By using the well prepared docker images of IOTStack, we save a lot of time from dealing with configuration. The heavy-lifting part is done for you so you can have more time spending on your <em>business logic</em> rather hours of configurating without knowing that they can work stably together.  </p>
 <p>Thank you for reading my clumsy article, for more real life projects about IOTStack you can refer to this <a href="http://picopiece.com/"><em>Link</em></a>.</p></div>

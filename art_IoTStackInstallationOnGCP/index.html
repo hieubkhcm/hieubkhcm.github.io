@@ -146,10 +146,24 @@ sudo apt upgrade -y
 <pre><code>curl -fsSL https://raw.githubusercontent.com/SensorsIot/IOTstack/master/install.sh | bash
 </code></pre>
 <p>As default, a directory call /IOTStack will be created as your /home directory<br />
-<img alt="Placeholder" src="/img/IoTStack/cd IOTStack.png" width="600" />  </p>
+<img alt="Placeholder" src="/img/IoTStack/cd IOTStack.png" width="600" /></p>
 <p>As you may see, there are two script file, install.sh and menu.sh. install.sh indeed the script file we curl from the link above. By invokinng install.sh, another directory of IOTStack will then created and the content will be cloned just as the same as the parent folder we see here.</p>
-<p>If you install IOTStack on a completely clean OS, without even docker installed, IOTStack will help to install the needed docker version for you.</p>
-<p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" /></p></div>
+<p>Now, its time to see what we have in menu</p>
+<pre><code>cd ~
+cd /IOTStack
+./menu.sh
+</code></pre>
+<p><img _="," align="center" alt="Placeholder" src="/img/IoTStack/menu.png" width="300" /></p>
+<p>Using your arrow keys to navigate around the menu, Build Stack is the first place we need to visit</p>
+<p>If you install IOTStack on a completely clean OS, without even docker installed, IOTStack will help you install the needed docker version.</p>
+<p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" /></p>
+<p>If everything is running properly, a menu will be shown<br />
+<img alt="Placeholder" src="/img/IoTStack/menushown.png" width="600" /></p>
+<p>Navigating aroung by arrow keys and choosing the docker images aby typing space bar. In my case, I choose <strong>grafana, influxdb, mosquitto, nodered, portainer-ce, portainer-agent, postgres, tasmoadmin and wiraguard</strong>. </p>
+<p>At this point, you finished choosing your <em>stack</em>, assuming this is the first time you install IOTStack, there are no images or containers running in you system yet. The next step is making eveything up and running.  </p>
+<p>Choosing the second option in the menu.<br />
+<img alt="Placeholder" src="/img/IoTStack/dockercmd.png" width="300" /></p>
+<p>There</p></div>
             </div>
         </div>
 

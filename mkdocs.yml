@@ -10,6 +10,8 @@ nav:
         - 'IoT Stack Installation On Ubuntu': art_IoTStackInstallationOnGCP.md
       - 5G:
         - '': art_002.md
+      -Java:
+        - '': art_Java_.md
       
     #====================
     - Project:

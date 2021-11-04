@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>IoT Stack Installation On Ubuntu - Note-taking as a Website</title>
+        <title>Deploy a Java application On Ubuntu Server - Note-taking as a Website</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -45,7 +45,17 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">IoT Stack Installation On Ubuntu</a>
+    <a href="../art_IoTStack_InstallationOnGCP/" class="dropdown-item">IoT Stack Installation On Ubuntu</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DevOps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Deploy a Java application On Ubuntu Server</a>
 </li>
     </ul>
   </li>
@@ -92,7 +102,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../art_IoTStack_InstallationOnGCP/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -119,12 +129,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#how-to-install-iotstack-on-ubuntu-and-monitor-all-containers-with-portainerio" class="nav-link">How to install IOTStack on Ubuntu and monitor all containers with Portainer.io</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#monitoring-all-built-container-with-portainerio" class="nav-link">Monitoring all built container with portainer.io</a>
+            <li class="nav-item" data-level="1"><a href="#how-to-build-and-deploy-a-java-spring-boot-application-on-server" class="nav-link">How to build and deploy a Java Spring-boot application on server</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -133,61 +138,10 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="how-to-install-iotstack-on-ubuntu-and-monitor-all-containers-with-portainerio">How to install IOTStack on Ubuntu and monitor all containers with Portainer.io</h1>
-<blockquote>
-<p><em>"Hackers rarely have full knowledge of the technology stack of a target." - John McAfee</em></p>
-</blockquote>
-<p>Written by <strong>Henry Le</strong> on Oct 29, 2021</p>
-<p>As I recently start projects on the term and found that open-source community already built a very completed stack that can do almost everything one can imagine to do with IoT. So this article I would like to share how can IoTStack be installed on Ubuntu. I tested the process on both Google Cloud Platform and my local server, so I believe that this instruction works just fine with anyone else have interests in start to have fun with IOTStack.</p>
-<p>If you already have a RPI4 with you, the <a href="https://sensorsiot.github.io/IOTstack/Getting-Started/">instruction</a> of Andreas Spiess is a must-read.</p>
-<p>Firstly, making sure you already have everything packages updated and upgrades with:</p>
-<pre><code>sudo apt update
-sudo apt upgrade -y
-</code></pre>
-<p>And also <em>curl</em> if you are not sure that the package is already installed  </p>
-<pre><code>sudo apt install curl
-</code></pre>
-<p>After having curl on your system, run the following command.</p>
-<pre><code>curl -fsSL https://raw.githubusercontent.com/SensorsIot/IOTstack/master/install.sh | bash
-</code></pre>
-<p>As default, a directory call /IOTStack will be created as your /home directory<br />
-<img alt="Placeholder" src="/img/IoTStack/cd IOTStack.png" width="600" /></p>
-<p>As you may see, there are two script file, <em>install.sh</em> and <em>menu.sh</em>, <em>install.sh</em> is indeed the script file we curl from the link above. By invokinng <em>install.sh</em>, another directory tree of IOTStack will then created and the content will be cloned just as the same as the parent folder we see here.</p>
-<p>Now, its time to see what we have in menu</p>
-<pre><code>cd ~
-cd /IOTStack
-./menu.sh
-</code></pre>
-<p><img alt="Placeholder" src="/img/IoTStack/menu.png" width="500" /></p>
-<p>Using your arrow keys to navigate around the menu, Build Stack is the first place we need to visit</p>
-<p>If you install IOTStack on a completely clean OS, without even docker installed, IOTStack will help you install the needed docker version.</p>
-<p><img alt="Placeholder" src="/img/IoTStack/Screenshot 2021-10-27_162608.png" width="600" /></p>
-<p>If everything is running properly, a menu will be shown<br />
-<img alt="Placeholder" src="/img/IoTStack/menushown.png" width="600" /></p>
-<p>Navigating aroung by arrow keys and choosing the docker images by typing space bar. In my case, I choose <strong>grafana, influxdb, mosquitto, nodered, portainer-ce, portainer-agent, postgres, tasmoadmin and wireguard</strong>. </p>
-<p>At this point, you finished choosing your <em>stack</em>, assuming this is the first time you install IOTStack, there are no images or containers running in you system yet. The next step is making eveything up and running.  </p>
-<p>Choosing the second option in the menu.<br />
-<img alt="Placeholder" src="/img/IoTStack/menushown.png" width="600" /></p>
-<p>There are several useful options in the <em>Docker Commands</em> menu, in this article I simply choosing <em>Start Stack</em>.
-The very first time building IOTStack might take a while because there are no existing images stored in your system yet. So for the first time, images of chosen option from the previous step will be automatically pulling to your system and then make it running.</p>
-<p>So far so good, the Stack after built up will look just as below, if there are any errors occur, error message will let you know while building up the stack.</p>
-<p><img alt="Placeholder" src="/img/IoTStack/builtup.png" width="700" /></p>
-<p>To check whether the docker images was pulled to your system, enter the following command  </p>
-<pre><code>docker images
-</code></pre>
-<p>To check the running containers  </p>
-<pre><code>docker ps -a
-</code></pre>
-<h1 id="monitoring-all-built-container-with-portainerio">Monitoring all built container with <a href="https://portainer.io/">portainer.io</a></h1>
-<p>If you try <strong>docker ps -a</strong>, by default you will see the container of portainer-ce is running with the IP exposed to outside. The port 9000 by default, is for administrators logging to the management webpage.<br />
-<img alt="Placeholder" src="/img/IoTStack/portainerce.png" width="800" /><br />
-On your Web Browser (ie. Chrome, Firefox, etc). Enter <a href="https://localhost:9000/"><em>localhost:9000/</em></a>, this will open up the Web GUI of portainer-ce.
-<img alt="Placeholder" src="/img/IoTStack/webportainer.png" width="600" /></p>
-<p>You will need to secure your admin account's password the first time you logging to the Portainer.<br />
-After logging in, the existing images and running containers are all shown up for your monitoring. Portainer provides various command buttons so that you can easily manipulate the Stack to certain levels.<br />
-<img alt="Placeholder" src="/img/IoTStack/portainercompleted.png" width="600" /></p>
-<p>Basically, there are all the steps you need to operate when dealing with IOTStack for the first time, the result may different from time to time since the project IOTStack is actively updated by its contributors. By using the well prepared docker images of IOTStack, we save a lot of time from dealing with configuration. The heavy-lifting part is done for you so you can have more time spending on your <em>business logic</em> rather hours of configurating without knowing that they can work stably together.  </p>
-<p>Thank you for reading my clumsy article, for more real life projects about IOTStack you can refer to this <a href="http://picopiece.com/"><em>Link</em></a>.</p></div>
+<h1 id="how-to-build-and-deploy-a-java-spring-boot-application-on-server">How to build and deploy a Java Spring-boot application on server</h1>
+<h3 id="build-a-java-spring-boot-project-with-maven-java-and-maven-version-control-with-sdkman-deploy-app-on-a-ubuntu-server">Build a Java Spring-boot project with Maven. Java and Maven version control with SDKMAN. Deploy app on a Ubuntu server.</h3>
+<p>Written by <strong>Henry Le</strong> on Nov 04, 2021</p>
+<p>Under typing...</p></div>
             </div>
         </div>
 
